@@ -1,4 +1,4 @@
-# 🌐 Surjya Narayan Sabat – Portfolio  
+# 🌐 Surjya Narayan Sabat  
 **Assistant Manager – Information Security | IT Continuity | Data & Automation Expert**
 
 Welcome to my portfolio!  
@@ -98,7 +98,5 @@ Built using VBA + SQL + .NET to remove duplicates and enhance data accuracy.
 📍 Bangalore, India  
 
 ---
-
-## 📁 Repository Structure
 
 
