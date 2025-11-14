@@ -1,4 +1,3 @@
-# 🌐 Surjya Narayan Sabat  
 **Assistant Manager – Information Security | IT Continuity | Data & Automation Expert**
 
 Welcome to my portfolio!  
@@ -96,6 +95,8 @@ Built using VBA + SQL + .NET to remove duplicates and enhance data accuracy.
 📧 Email: **surjyansabat@gmail.com**  
 🔗 LinkedIn: **https://www.linkedin.com/in/surjya-sabat**  
 📍 Bangalore, India  
++91-9930980681
+Whats App: **https://wa.me/919930980681**
 
 ---
 
