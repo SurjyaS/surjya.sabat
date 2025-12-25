@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernization Project Dashboard | Dark Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #1a1d23;
+            --shadow-light: #252a32;
+            --shadow-dark: #0f1116;
+            --accent-blue: #60a5fa;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #cbd5e1;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding: 1.5rem;
+        }
+
+        /* Dark Skeuomorphic Main Container */
+        .skeuo-card {
+            background: var(--bg-color);
+            border-radius: 30px;
+            box-shadow: 12px 12px 24px var(--shadow-dark), -8px -8px 20px var(--shadow-light);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #2d343f;
+        }
+
+        /* Dark Skeuomorphic Inset (Pressed) */
+        .skeuo-inset {
+            background: var(--bg-color);
+            border-radius: 20px;
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -4px -4px 10px var(--shadow-light);
+            padding: 1.5rem;
+            border: 1px solid #232931;
+        }
+
+        /* Neon Goal Buttons */
+        .goal-node {
+            background: var(--bg-color);
+            border-radius: 15px;
+            box-shadow: 6px 6px 12px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .goal-node:hover {
+            color: var(--accent-blue);
+            box-shadow: 0px 0px 15px rgba(96, 165, 250, 0.3);
+        }
+
+        /* PDCA Circular Grid */
+        .pie-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .pie-slice {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            box-shadow: 10px 10px 20px var(--shadow-dark);
+            border: 2px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        .pie-slice:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+
+        /* Quadrant Dark Palette */
+        .p-slice { border-radius: 150px 20px 20px 20px; background: #2d1b1b; border-left: 4px solid #ef4444; }
+        .d-slice { border-radius: 20px 150px 20px 20px; background: #1b2533; border-right: 4px solid #3b82f6; }
+        .c-slice { border-radius: 20px 20px 150px 20px; background: #2d2a1b; border-right: 4px solid #eab308; }
+        .a-slice { border-radius: 20px 20px 20px 150px; background: #1b2d22; border-left: 4px solid #22c55e; }
+
+        /* Timeline */
+        .timeline-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 3rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline-line {
+            position: absolute;
+            height: 6px;
+            background: var(--shadow-dark);
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        .timeline-node {
+            position: relative;
+            z-index: 2;
+            background: var(--bg-color);
+            width: 55px; height: 55px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 6px 6px 12px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+            border: 2px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="max-w-6xl mx-auto">
+        <header class="skeuo-card text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight">Optimizing Data Infrastructure</h1>
+            <h2 class="text-xl md:text-2xl font-bold text-blue-400 mt-2">Cloud Migration & Power BI Integration</h2>
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+                <div class="skeuo-inset font-bold px-8 py-2 text-blue-100">Lead: Surjya Narayan Sabat</div>
+                <div class="skeuo-inset font-bold text-blue-400 px-8 py-2">Date: October 2024</div>
+            </div>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <section class="skeuo-card">
+                <h3 class="text-2xl font-bold mb-4 flex items-center text-blue-300">
+                    <i class="fas fa-briefcase mr-3 text-blue-500"></i> Business Case
+                </h3>
+                <div class="skeuo-inset text-sm leading-relaxed text-slate-400">
+During the shared drive migration process, small finance and production automations were severely impacted due to the reliance on an outdated database system (MS Access). <strong> Over 1,200 associates </strong>faced critical challenges, including performance bottlenecks, limited scalability, security vulnerabilities, and financial losses. These issues stem from dependence on obsolete infrastructure, directly affecting operational efficiency and hampering the Workforce Management (WFM) application, back-office inquiries, claims processing, complaint handling, and strategic decision-making.
+Additionally, the shared drive environment posed significant security risks, such as exposure to accidental file deletions, unauthorized access, and data corruption. These vulnerabilities disrupted management operations and compromised the ability to deliver real-time reporting for leadership decision-making.
+
+                </div>
+            </section>
+
+            <section class="skeuo-card">
+                <h3 class="text-2xl font-bold mb-4 flex items-center text-red-400">
+                    <i class="fas fa-exclamation-triangle mr-3"></i> Problem Statement
+                </h3>
+                <div class="skeuo-inset text-sm text-slate-400">
+                    <ul class="space-y-2">
+                        <li><strong class="text-red-300">• Performance Issues:</strong> Processing a single case on finance automation takes 6–7 minutes, leading to inefficiencies in WFM and other tools, thereby lowering productivity.</li>
+                        <li><strong class="text-red-300">• Scalability Constraints:</strong> The system can support only 10–12 reliable concurrent connections, limiting collaboration and operational efficiency.</li>
+                        <li><strong class="text-red-300">• Dependency on Legacy Systems:</strong> Reliance on Windows 7 restricts compatibility with modern tools and systems, delaying innovation and growth.</li>
+                        <li><strong class="text-red-300">• Efficiency:</strong> Half a day is lost validating/consolidating data from 100+ MS Access databases.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="skeuo-card">
+            <h3 class="text-2xl font-bold mb-8 text-center text-blue-100 uppercase tracking-widest">Project Strategic Goals</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="goal-node"><i class="fas fa-server text-blue-400 mb-2"></i><p class="text-[10px] font-bold uppercase">Modernization</p><p class="text-[10px]">Cloud DBMS Migration</p></div>
+                <div class="goal-node"><i class="fas fa-chart-pie text-blue-400 mb-2"></i><p class="text-[10px] font-bold uppercase">Reporting</p><p class="text-[10px]">Real-time Power BI</p></div>
+                <div class="goal-node"><i class="fas fa-tachometer-alt text-blue-400 mb-2"></i><p class="text-[10px] font-bold uppercase">Efficiency</p><p class="text-[10px]">80% Effort Reduction</p></div>
+                <div class="goal-node"><i class="fas fa-bolt text-blue-400 mb-2"></i><p class="text-[10px] font-bold uppercase">Performance</p><p class="text-[10px]">Optimized Automation</p></div>
+            </div>
+        </section>
+
+        <section class="skeuo-card">
+            <h3 class="text-3xl font-bold text-center mb-12 uppercase text-white">Database Modernization PDCA Cycle</h3>
+            <div class="pie-grid">
+                <div class="pie-slice p-slice">
+                    <div class="flex items-center mb-4"><span class="bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3">1</span><h4 class="font-black text-xl text-red-200">PLAN</h4></div>
+                    <ul class="text-xs space-y-3 text-slate-300">
+                        <li>• Identify MS Access latency issues.</li>
+                        <li>• Analyze 4hr/day productivity loss.</li>
+                        <li>• Audit security risks & access gaps.</li>
+                        <li>• Benchmark legacy bottlenecks.</li>
+                        <li>• Target 80% effort reduction.</li>
+                    </ul>
+                </div>
+                <div class="pie-slice d-slice">
+                    <div class="flex items-center mb-4"><span class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-3">2</span><h4 class="font-black text-xl text-blue-200">DO</h4></div>
+                    <ul class="text-xs space-y-3 text-slate-300">
+                        <li>• Migrate to Centralized Azure SQL.</li>
+                        <li>• Deploy Excel-SQL input macros.</li>
+                        <li>• Launch Power BI Dashboards.</li>
+                        <li>• Conduct advanced SQL training.</li>
+                        <li>• Execute pilot automation tests.</li>
+                    </ul>
+                </div>
+                <div class="pie-slice a-slice">
+                    <div class="flex items-center mb-4 w-full justify-end text-right"><h4 class="font-black text-xl text-green-200 mr-3">ACT</h4><span class="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span></div>
+                    <ul class="text-xs space-y-3 text-slate-300 text-right mt-2">
+                        <li>Standardize Training program •</li>
+                        <li>Institutionalize Sharing sessions •</li>
+                        <li>Assign MI technical refreshers •</li>
+                        <li>Define maintenance roles •</li>
+                        <li>Scale to 12+ connections •</li>
+                    </ul>
+                </div>
+                <div class="pie-slice c-slice">
+                    <div class="flex items-center mb-4 w-full justify-end text-right"><h4 class="font-black text-xl text-yellow-200 mr-3">CHECK</h4><span class="bg-yellow-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span></div>
+                    <ul class="text-xs space-y-3 text-slate-300 text-right mt-2">
+                        <li>Monitor connectivity alerts •</li>
+                        <li>Conduct SQL refresher sessions •</li>
+                        <li>Validate BI consolidation gain •</li>
+                        <li>Track environment noise reduction •</li>
+                        <li>Audit real-time data accuracy •</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="skeuo-card">
+            <h3 class="text-2xl font-bold text-center mb-16 text-white uppercase tracking-widest">Project Milestones</h3>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-node"><span class="font-bold text-slate-400">Jul</span><div class="absolute top-16 text-[9px] text-blue-300 font-bold uppercase">Identity</div></div>
+                <div class="timeline-node"><span class="font-bold text-slate-400">Aug</span><div class="absolute top-16 text-[9px] text-blue-300 font-bold uppercase">Define</div></div>
+                <div class="timeline-node"><span class="font-bold text-slate-400">Sep</span><div class="absolute top-16 text-[9px] text-blue-300 font-bold uppercase">Evaluation</div></div>
+                <div class="timeline-node bg-blue-600 text-white border-none shadow-lg shadow-blue-900/50"><i class="fas fa-check"></i><div class="absolute top-16 text-[9px] font-bold text-blue-400">APPLY (OCT)</div></div>
+            </div>
+        </section>
+
+        <section class="skeuo-card border-l-8 border-blue-500">
+            <h3 class="text-2xl font-bold mb-4 text-blue-300">Project Conclusion</h3>
+            <p class="text-slate-400 leading-relaxed font-medium">
+                By successfully applying Lean Six Sigma principles through the PDCA cycle, this project transitioned critical operations from a fragile, legacy MS Access environment to a robust, scalable Azure SQL cloud infrastructure. The initiative eliminated performance bottlenecks impacting 1,200 associates and achieved over 80% reduction in manual effort. Power BI integration now provides real-time data-driven insights, ensuring a sustainable foundation for future growth.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
